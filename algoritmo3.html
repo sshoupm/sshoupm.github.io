@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 3: Números naturales pares</title>
+    <link rel="stylesheet" href="obfuscado.css">
+    <script>
+        function cubo(){
+            if(!isNaN(document.getElementById("num").value) && 1<(document.getElementById("num").value)){
+                var naturales = parseInt(document.getElementById("num").value);
+                var resultado = "Resultado: <br><br>";
+                for (let i=2; i<= naturales*2; i++){
+                    if (i%2==0){
+                        resultado += `${i} al cubo es ${i * i * i}<br>`;
+                    }
+                }
+                document.getElementById("out").innerHTML=resultado;
+            } else {
+                document.getElementById("out").innerHTML = 
+                `Existe un error en el tipo de datos ingresados.<br>El valor debe ser numérico y mayor a 1`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left-text">⋅˚₊‧ ୨ Fundamentos de Computación III ୧ ‧₊˚ ⋅</div>
+        <div class="right-text">⋅˚₊‧ ୨ Sofía Paola Shoup Morales ୧ ‧₊˚ ⋅</div>
+    </div>
+
+    <div class="section-content">
+        <!-- Botón para regresar al menú -->
+        <div><a href="index.html"> Regresar al menú </a></div>
+    </div>
+
+    <section class="centered-section">
+        <div class="section-bar">
+            <div class="window-symbols">
+                <span>-</span>
+                <span>☐</span>
+                <span>X</span>
+            </div>
+        </div>
+        <div class="section-content">
+            <h1>Algoritmo 3: Números naturales pares<br>☁️𓏲 ๋࣭ ࣪ ˖<br></h1>
+            <p>Escribir un programa que muestre en pantalla los n primeros números naturales pares elevados al cubo.<br>
+                <br>Ejemplo: <br>
+                2 al cubo es 8<br>
+                4 al cubo es 64<br>
+                6 al cubo es ...<br>
+                8 al cubo es ...<br>
+                100 al cubo es ...<br><br></p>
+        </div>
+    </section>
+
+    Cantidad de números naturales pares: <input type="text" id="num" value="20"><br>
+    <br>
+
+    <input type="button" class="retro-button" value="Encontrar los primeros n números naturales" onclick="cubo()"><br>
+    <p id="out">Resultado:</p>
+</body>
+</html>

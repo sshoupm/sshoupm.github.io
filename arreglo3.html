@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 3: Cuadrado Mágico</title>
+    <script src="funciones3obfus.js"></script>
+    <link rel="stylesheet" href="obfuscado.css">
+</head>
+<body onload="Generar()">
+    <div class="top-bar">
+        <div class="left-text">⋅˚₊‧ ୨ Fundamentos de Computación III ୧ ‧₊˚ ⋅</div>
+        <div class="right-text">⋅˚₊‧ ୨ Sofía Paola Shoup Morales ୧ ‧₊˚ ⋅</div>
+    </div>
+
+    <div class="section-content">
+        <!-- Botón para regresar al menú -->
+        <div><a href="index.html"> Regresar al menú </a></div>
+    </div>
+
+    <section class="centered-section">
+        <div class="section-bar">
+            <div class="window-symbols">
+                <span>-</span>
+                <span>☐</span>
+                <span>X</span>
+            </div>
+            </div>
+            <div class="section-content">
+                <h1>Arreglo 3: Cuadrado Mágico<br>☁️𓏲 ๋࣭ ࣪ ˖<br></h1>
+                <p>Los cuadrados mágicos son un conjunto de números enteros <br>
+                    diferentes colocados en las casillas de un cuadrado, y se caracterizan <br> 
+                    porque la suma de sus filas, columnas y diagonales principales es siempre la misma.
+                </p>
+            </div>
+    </section>
+
+    <p>Seleccione el tamaño del cuadrado:</p>
+    <select id="lados" onchange="Generar()">
+        <option value="2">2x2</option>
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+        <option value="5">5x5</option>
+    </select>
+    <br><br>
+    <input type="button" class="retro-button" value="Generar" onclick="Generar()">
+    <input type="button" class="retro-button" value="Calcular" onclick="Calcular()">
+    <input type="button" class="retro-button" value="Ejemplo de cuadrado" onclick="EjemploCuadrado()">
+    <input type="button" class="retro-button" value="Ejemplo de cuadrado mágico" onclick="EjemploMagico()">
+    <br><br>
+    <table id="cuadrado"></table>
+    <p id="verificar"></p>
+</body>
+</html>

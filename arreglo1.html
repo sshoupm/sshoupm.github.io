@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo 1: Elementos enteros</title>
+    <script src="funcionesobfus.js"></script>
+    <link rel="stylesheet" href="obfuscado.css">
+</head>
+<body onload="generarNumeroAleatorio()">
+
+    <div class="top-bar">
+        <div class="left-text">⋅˚₊‧ ୨ Fundamentos de Computación III ୧ ‧₊˚ ⋅</div>
+        <div class="right-text">⋅˚₊‧ ୨ Sofía Paola Shoup Morales ୧ ‧₊˚ ⋅</div>
+    </div>
+
+    <!-- Sección del título e instrucciones centrada -->
+    <div class="section-content">
+        <!-- Botón para regresar al menú -->
+        <div><a href="index.html"> Regresar al menú </a></div>
+    </div>
+    
+    <section class="centered-section">
+        <div class="section-bar">
+            <div class="window-symbols">
+                <span>-</span>
+                <span>☐</span>
+                <span>X</span>
+            </div>
+        </div>
+        <div class="section-content">
+            <h1>Arreglo 1: Elementos enteros<br>☁️𓏲 ๋࣭ ࣪ ˖<br></h1>
+            <p>
+                Capture e imprima un arreglo de 10 elementos de tipo entero. <br>
+                El arreglo se debe de imprimir de forma horizontal y vertical. <br>
+                Muestre el índice de cada elemento. <br>
+                La captura de elementos se debe de cancelar al introducir el último elemento<br>
+                Incluya un botón de reinicio.
+            </p>
+        </div>
+    </section>
+
+    <!-- Formulario para captura de datos -->
+    <form action="javascript:capturar()">
+        <p id="arreglo">Capture el elemento[0]</p>
+        <input type="number" id="datos" onkeydown="if(event.key==='.'){event.preventDefault();}" required>
+        <p id="error"></p>
+        <!-- Contenedor para alinear los botones -->
+        <div class="button-container">
+            <input type="submit" class="retro-button" value="Capturar" id="botoncapturar">
+            <input type="button" class="retro-button" value="Reiniciar" onclick="reiniciar()">
+        </div>
+    </form>
+
+    <!-- Tablas para mostrar los datos, centradas -->
+    <br><br>
+    <table class="data-table">
+        <tr id="renglon"></tr>
+        <tr id="renglon2"></tr>
+    </table>
+    <br>
+    <table id="vertical" class="data-table"></table>
+</body>
+</html>

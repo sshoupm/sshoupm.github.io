@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 4: Serie o sucesión de Fibonacci</title>
+    <link rel="stylesheet" href="obfuscado.css">
+    <script>
+        function fibonacci(){
+            if(!isNaN(document.getElementById("lim").value) && (document.getElementById("lim").value)>=0){
+                limite=parseInt((document.getElementById("lim").value));
+                var f1=0;
+                var f2=1;
+                var fn=0;
+                sucesion="Fibonacci= ";
+                if(limite==0){
+                    sucesion += `0`;
+                } else if (limite==1){
+                    sucesion += `0, 1, 1`;
+                }
+                else{
+                    for(let i=f1; i<limite; i++){
+                        if(f1<=limite){
+                            fn=f1;
+                            f1=f2;
+                            f2=fn+f2;
+                            if(f1<=limite){
+                                sucesion +=`${fn}, `;
+                            } else{
+                                sucesion += `${fn}`;
+                            }
+                        }
+                    }
+                }
+                document.getElementById("out").innerHTML=sucesion;
+            }else{
+                document.getElementById("out").innerHTML=`Introduzca un límite válido para la sucesión`;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left-text">⋅˚₊‧ ୨ Fundamentos de Computación III ୧ ‧₊˚ ⋅</div>
+        <div class="right-text">⋅˚₊‧ ୨ Sofía Paola Shoup Morales ୧ ‧₊˚ ⋅</div>
+    </div>
+
+    <div class="section-content">
+        <!-- Botón para regresar al menú -->
+        <div><a href="index.html"> Regresar al menú </a></div>
+    </div>
+
+    <section class="centered-section">
+        <div class="section-bar">
+            <div class="window-symbols">
+                <span>-</span>
+                <span>☐</span>
+                <span>X</span>
+            </div>
+        </div>
+        <div class="section-content">
+            <h1>Algoritmo 4: Serie o sucesión de Fibonacci<br>☁️𓏲 ๋࣭ ࣪ ˖<br></h1>
+            <p>Programa que muestra la serie o Sucesión de Fibonacci al introducir un límite.</p>
+        </div>
+    </section>
+    
+    Límite: <input type="text" id="lim" value="20"><br>
+    <br>
+    <input type="button" class="retro-button" value="Imprimir sucesión" onclick="fibonacci()"><br>
+    <p id="out">Fibonacci= </p>
+</body>
+</html>

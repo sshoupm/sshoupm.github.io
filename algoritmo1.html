@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 1: Múltiplos de 3</title>
+    <link rel="stylesheet" href="obfuscado.css">
+    <script>
+        function multiplosde3(){
+            if(!isNaN(document.getElementById("num1").value) && !isNaN(document.getElementById("num2").value)){
+                var a= document.getElementById("num1").value;
+                var b= document.getElementById("num2").value;
+                var multiplos ="";
+                for (let i = a; i <= b; i++) {
+                    if(i%3==0){
+                        multiplos+=`<br>${i}`;
+                    }
+                }
+                if(a!=b)
+                    for(let i = a; i>= b; i--){
+                        if (i%3==0){
+                            multiplos += `<br> ${i}`
+                        }
+                    }
+                document.getElementById("out").innerHTML=`Los múltiplos de 3 entre ${a} y ${b} son: ${multiplos}`;
+            } else {
+                document.getElementById("out").innerHTML=`Existe un error en el tipo de datos ingeresados`
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left-text">⋅˚₊‧ ୨ Fundamentos de Computación III ୧ ‧₊˚ ⋅</div>
+        <div class="right-text">⋅˚₊‧ ୨ Sofía Paola Shoup Morales ୧ ‧₊˚ ⋅</div>
+    </div>
+
+    <div class="section-content">
+        <!-- Botón para regresar al menú -->
+        <div><a href="index.html"> Regresar al menú </a></div>
+    </div>
+
+    <section class="centered-section">
+        <div class="section-bar">
+            <div class="window-symbols">
+                <span>-</span>
+                <span>☐</span>
+                <span>X</span>
+            </div>
+        </div>
+        <div class="section-content">
+            <h1>Algoritmo 1: Múltiplos de 3<br>☁️𓏲 ๋࣭ ࣪ ˖<br></h1>
+            <p>Encontrar o imprimir todos los números comprendidos entre dos enteros que son múltiplos de 3.</p>
+        </div>
+    </section>
+    
+        Dato 1: <input type="text" value="10" id="num1"><br>
+        <br>
+        Dato 2: <input type="text" value="20" id="num2"><br>
+        <br>
+    
+    <div class="button-container">
+        <input type="button" class="retro-button" value="Encontrar los múltiplos de 3" onclick="multiplosde3()"><br>
+    </div>
+    <p id="out">Resultado:</p><br>
+</body>
+</html>
