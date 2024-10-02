@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de memoria</title>
+    <link rel="stylesheet" href="obfuscado.css">
+    <script src="funcionmemoramaobfus.js"></script>
+    
+</head>
+<body onload="Revolver(), Fondo()">
+    <div class="top-bar">
+        <div class="left-text">⋅˚₊‧ ୨ Fundamentos de Computación III ୧ ‧₊˚ ⋅</div>
+        <div class="right-text">⋅˚₊‧ ୨ Sofía Paola Shoup Morales ୧ ‧₊˚ ⋅</div>
+    </div>
+
+    <div class="section-content">
+        <!-- Botón para regresar al menú -->
+        <div><a href="index.html"> Regresar al menú </a></div>
+    </div>
+
+    <h1>𓏲 ๋࣭ ࣪ ˖☁️ Memorama ☁️𓏲 ๋࣭ ࣪ ˖</h1>
+
+        <table id="tablita"style= "border: 3px solid #ffd1e4; border-radius: 10px;">
+            <tr>
+                <td><img src="./img/0.jpg" id="0" alt="" class="imagen" onclick="CambiarImagen(this,0)"></td>
+                <td><img src="./img/0.jpg" id="1" alt="" class="imagen" onclick="CambiarImagen(this,1)"></td>
+                <td><img src="./img/0.jpg" id="2" alt="" class="imagen" onclick="CambiarImagen(this,2)"></td>
+                <td><img src="./img/0.jpg" id="3" alt="" class="imagen" onclick="CambiarImagen(this,3)"></td>
+            </tr>
+            <tr>
+                <td><img src="./img/0.jpg" id="4" alt="" class="imagen" onclick="CambiarImagen(this,4)"></td>
+                <td><img src="./img/0.jpg" id="5" alt="" class="imagen" onclick="CambiarImagen(this,5)"></td>
+                <td><img src="./img/0.jpg" id="6" alt="" class="imagen" onclick="CambiarImagen(this,6)"></td>
+                <td><img src="./img/0.jpg" id="7" alt="" class="imagen" onclick="CambiarImagen(this,7)"></td>
+            </tr>
+            <tr>
+                <td><img src="./img/0.jpg" id="8" alt="" class="imagen" onclick="CambiarImagen(this,8)"></td>
+                <td><img src="./img/0.jpg" id="9" alt="" class="imagen" onclick="CambiarImagen(this,9)"></td>
+                <td><img src="./img/0.jpg" id="10" alt="" class="imagen" onclick="CambiarImagen(this,10)"></td>
+                <td><img src="./img/0.jpg" id="11" alt="" class="imagen" onclick="CambiarImagen(this,11)"></td>
+            </tr>
+            <tr>
+                <td><img src="./img/0.jpg" id="12" alt="" class="imagen" onclick="CambiarImagen(this,12)"></td>
+                <td><img src="./img/0.jpg" id="13" alt="" class="imagen" onclick="CambiarImagen(this,13)"></td>
+                <td><img src="./img/0.jpg" id="14" alt="" class="imagen" onclick="CambiarImagen(this,14)"></td>
+                <td><img src="./img/0.jpg" id="15" alt="" class="imagen" onclick="CambiarImagen(this,15)"></td>
+            </tr>
+        </table>
+        <h1 id="contador">Pares Encontrados: 0</h1>
+        <input type="button" class="retro-button" value="Reiniciar" onclick="Reiniciar()">
+        <p id="Salida"></p>
+    </body>
+    </html>
