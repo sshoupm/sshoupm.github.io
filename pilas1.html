@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilas1</title>
+    <link rel="stylesheet" href="obfuscado.css">
+    <link rel="stylesheet" href="stackobfus.css">
+    <script src="stackobfus.js"></script>
+</head>
+
+<body onload="Aleatorias()">
+
+    <div class="top-bar">
+        <div class="left-text">⋅˚₊‧ ୨ Fundamentos de Computación III ୧ ‧₊˚ ⋅</div>
+        <div class="right-text">⋅˚₊‧ ୨ Sofía Paola Shoup Morales ୧ ‧₊˚ ⋅</div>
+    </div>
+
+    <div class="section-content">
+        <!-- Botón para regresar al menú -->
+        <div><a href="index.html"> Regresar al menú </a></div>
+    </div>
+    
+    <h1>☁️ Pila Genérica ☁️</h1>
+    Desarrolle una aplicación que muestre un objeto tipo pila, 
+    <br>e implemente los métodos <b>push</b>, <b>pop</b>, 
+    <b>peek</b>, <b>clear</b>, <b>find</b>, <b>isEmpty</b>
+    <br><br>
+    <img src="img/Pila.png" alt="" style="display: inline-table;">
+    <h3 id="mensaje"></h3>
+    Elemento: <input type="text" id="Elemento" onkeyup="CambioTexto()">
+    <br><br>
+    <input type="button" class="retro-button" value="Push()" id="iPush" onclick="Push(); Aleatorias();">
+    <input type="button" class="retro-button" value="Pop()" id="iPop" onclick="Pop()">
+    <input type="button" class="retro-button" value="Peek()" id="iPeek" onclick="Peek()">
+    <input type="button" class="retro-button" value="Clear()" id="iClear" onclick="Clear()">
+    <input type="button" class="retro-button" value="Find()" id="iFind" onclick="Find()">
+    <input type="button" class="retro-button" value="isEmpty()" id="iIsEmpty" onclick="isEmpty()">
+    <br><br>
+    <table style="display: inline-table;">
+        <tbody id="tabla"></tbody>
+    </table>
+    <h3 id="mensaje"></h3>
+</body>
+
+</html>
